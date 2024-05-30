@@ -39,7 +39,9 @@ export default function Home() {
             is open for you. Feel free to ask me anything!
           </HomeDescription>
           <div className="mt-6 space-x-4">
-            <Button>👋 Say hello</Button>
+            <Button href="mailto:davidoh@gmail.com">
+              👋 Say hello
+            </Button>
             <Button>Schedule a meeting</Button>
           </div>
         </div>

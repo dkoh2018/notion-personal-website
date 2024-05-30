@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  GithubLink,
+  TwitterLink,
+  LinkedInLink,
+  InstagramLink,
+} from "../keys/links_and_stuff";
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -66,16 +72,16 @@ export default function Footer() {
           <FooterLink href="#">Contact</FooterLink>
         </LinkGroup>
         <SocialGroup>
-          <SocialLink href="#">
+          <SocialLink href={GithubLink}>
             <i className="fab fa-github"></i>
           </SocialLink>
-          <SocialLink href="#">
+          <SocialLink href={TwitterLink}>
             <i className="fab fa-twitter"></i>
           </SocialLink>
-          <SocialLink href="#">
+          <SocialLink href={LinkedInLink}>
             <i className="fab fa-linkedin"></i>
           </SocialLink>
-          <SocialLink href="#">
+          <SocialLink href={InstagramLink}>
             <i className="fab fa-instagram"></i>
           </SocialLink>
         </SocialGroup>
