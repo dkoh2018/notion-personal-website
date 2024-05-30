@@ -1,20 +1,18 @@
 import styled from "styled-components";
-import {
-  fontSize,
-  fontWeight,
-  color,
-  textAlign,
-  margin,
-  compose,
-} from "styled-system";
 
 const Title = styled.h1`
-  margin: 10px 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  font-size: 30rem;
+  font-weight: 700;
   text-align: center;
+  margin: 10px 0;
+  color: #2c3e50;
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
 
-  ${compose(fontSize, fontWeight, color, textAlign, margin)}
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 
 export default Title;

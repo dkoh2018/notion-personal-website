@@ -1,39 +1,86 @@
 import React from "react";
+import styled from "styled-components";
+
+const FooterContainer = styled.footer`
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  color: #4a4a4a;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border-top: 1px solid #eaeaea;
+`;
+
+const FooterContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+const LinkGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+`;
+
+const FooterLink = styled.a`
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #000000;
+  }
+`;
+
+const SocialGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+`;
+
+const SocialLink = styled.a`
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #000000;
+  }
+`;
+
+const Copyright = styled.p`
+  font-size: 0.875rem;
+`;
 
 export default function Footer() {
   return (
-    <footer className="w-full py-8 bg-gray-100 text-gray-600">
-      <div className="container mx-auto text-center">
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="#" className="hover:text-gray-800">
-            Home
-          </a>
-          <a href="#" className="hover:text-gray-800">
-            About
-          </a>
-          <a href="#" className="hover:text-gray-800">
-            Projects
-          </a>
-          <a href="#" className="hover:text-gray-800">
-            Contact
-          </a>
-        </div>
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="#" className="hover:text-gray-800">
+    <FooterContainer>
+      <FooterContent>
+        <LinkGroup>
+          <FooterLink href="#">Home</FooterLink>
+          <FooterLink href="#">About</FooterLink>
+          <FooterLink href="#">Projects</FooterLink>
+          <FooterLink href="#">Contact</FooterLink>
+        </LinkGroup>
+        <SocialGroup>
+          <SocialLink href="#">
             <i className="fab fa-github"></i>
-          </a>
-          <a href="#" className="hover:text-gray-800">
+          </SocialLink>
+          <SocialLink href="#">
             <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="hover:text-gray-800">
+          </SocialLink>
+          <SocialLink href="#">
             <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="#" className="hover:text-gray-800">
+          </SocialLink>
+          <SocialLink href="#">
             <i className="fab fa-instagram"></i>
-          </a>
-        </div>
-        <p className="text-sm">© David Oh 2018 - 2024</p>
-      </div>
-    </footer>
+          </SocialLink>
+        </SocialGroup>
+        <Copyright>© David Oh 2018 - 2024</Copyright>
+      </FooterContent>
+    </FooterContainer>
   );
 }

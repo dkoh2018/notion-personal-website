@@ -1,30 +1,11 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import styled from "styled-components";
-import {
-  fontSize,
-  fontWeight,
-  color,
-  textAlign,
-  margin,
-  compose,
-} from "styled-system";
-
-const Title = styled.h1`
-  margin: 10px 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
-  ${compose(fontSize, fontWeight, color, textAlign, margin)}
-`;
-
-const SubTitle = styled.h2`
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1rem;
-`;
+import Title from "@/components/Title";
+import SubTitle from "@/components/SubTitle";
+import SubTitle2 from "@/components/SubTitle2";
+import Button from "@/components/Button";
+import HomeDescription from "@/components/HomeDescription";
 
 export default function Home() {
   return (
@@ -41,33 +22,25 @@ export default function Home() {
               className="object-cover"
             /> */}
           </div>
-          <Title>Chan Oh</Title>
-          <p className="text-xl text-gray-600 mt-2">
-            Options Trader → Programmer
-          </p>
-          <p className="mt-4 text-gray-700">
-            I'm a Learner. 7+ Years Options Trading, 6+ Years
-            Entrepreneurship in Chicago, now Transitioning into Tech.
-          </p>
-          <button className="mt-6 px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
-            More about me →
-          </button>
+          <Title>David Oh</Title>
+          <SubTitle2>Options Trader → Programmer</SubTitle2>
+          <HomeDescription>
+            7+ Years Event Driven Options Trading + Entrepreneurship
+            in Chicago, now building innovative tech solutions.
+          </HomeDescription>
+          <Button>More about me →</Button>
         </div>
       </section>
       <section className="flex-1 flex flex-col items-center justify-center px-4 py-16 bg-white">
         <div className="text-center max-w-2xl">
           <SubTitle>Get in touch</SubTitle>
-          <p className="mt-2 text-gray-700">
+          <HomeDescription>
             I'm actively looking for job opportunities, so my inbox
             is open for you. Feel free to ask me anything!
-          </p>
+          </HomeDescription>
           <div className="mt-6 space-x-4">
-            <button className="px-4 py-2 bg-gray-200 text-black rounded-full hover:bg-gray-300 transition">
-              👋 Say hello
-            </button>
-            <button className="px-4 py-2 bg-gray-200 text-black rounded-full hover:bg-gray-300 transition">
-              Schedule a meeting
-            </button>
+            <Button>👋 Say hello</Button>
+            <Button>Schedule a meeting</Button>
           </div>
         </div>
       </section>
